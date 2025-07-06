@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+using System;
 namespace Focient;
 
 public partial class Form1 : Form
@@ -6,7 +8,7 @@ public partial class Form1 : Form
     {
         InitializeComponent();
     }
-    
+
     private void btnRegister_Click(object sender, EventArgs e)
     {
         if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
