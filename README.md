@@ -48,3 +48,7 @@ Before starting, make sure you have:
 
 
 AI Support Explanation : 
+1. Assisting to organize the file structure, step of development
+2. Generate the sourcecode
+3. Accelerate the debugging and developing
+4. Able to give a suggestion of revised code

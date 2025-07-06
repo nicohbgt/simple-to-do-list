@@ -48,7 +48,7 @@ namespace Focient.Forms
 
                         // Set ComboBox IntensityLevel
                         // Pastikan item di cbIntensityLevel sama dengan string enum
-                        cbIntensityLevel.SelectedItem = _originalPlan.IntensityLevel.ToString();
+                        IntensityLevel.SelectedItem = _originalPlan.IntensityLevel.ToString();
                     }
                     else
                     {
@@ -64,31 +64,31 @@ namespace Focient.Forms
             }
             else // Mode Tambah Baru
             {
-                dtpDate.Value = DateTime.Today; // Default tanggal hari ini
+                Date.Value = DateTime.Today; // Default tanggal hari ini
                 // Default intensity bisa LOW atau null tergantung kebutuhan
-                cbIntensityLevel.SelectedIndex = 0; // Pilih item pertama (misal LOW)
+                IntensityLevel.SelectedIndex = 0; // Pilih item pertama (misal LOW)
             }
         }
 
         private void InitializeIntensityComboBox()
         {
             // Isi ComboBox dengan nilai dari enum IntensityLevel
-            cbIntensityLevel.Items.Clear();
+            IntensityLevel.Items.Clear();
             foreach (string level in Enum.GetNames(typeof(IntensityLevel)))
             {
-                cbIntensityLevel.Items.Add(level);
+                IntensityLevel.Items.Add(level);
             }
-            if (cbIntensityLevel.Items.Count > 0)
+            if (IntensityLevel.Items.Count > 0)
             {
-                cbIntensityLevel.SelectedIndex = 0; // Default pilih yang pertama (misal LOW)
+                IntensityLevel.SelectedIndex = 0; // Default pilih yang pertama (misal LOW)
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             // 1. Validasi Input
-            string planName = txtName.Text.Trim();
-            DateTime planDate = dtpDate.Value.Date;
+            string planName = Name.Text.Trim();
+            DateTime planDate = Date.Value.Date;
             string description = txtDescription.Text.Trim();
             IntensityLevel selectedIntensity;
 
@@ -98,7 +98,7 @@ namespace Focient.Forms
                 return;
             }
 
-            if (cbIntensityLevel.SelectedItem == null)
+            if (IntensityLevel.SelectedItem == null)
             {
                 MessageBox.Show("Pilih tingkat intensitas.", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
