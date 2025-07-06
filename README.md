@@ -41,10 +41,10 @@ Feature :
 Setup Instruction : 
 
 Before starting, make sure you have:
-    1. Windows 7 or later
-    2. .NET SDK 6.0+ installed
-    3. Visual Studio or Visual Studio Code
-    4. Git (optional, for cloning the repository)
+1. Windows 7 or later
+2. .NET SDK 6.0+ installed
+3. Visual Studio or Visual Studio Code
+4. Git (optional, for cloning the repository)
 
 
 AI Support Explanation : 
